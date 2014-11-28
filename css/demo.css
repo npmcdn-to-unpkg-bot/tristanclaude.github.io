@@ -39,7 +39,8 @@ h2 {
 
 .meny {
 	display: none;
-    width:160px
+    width:160px;
+    padding: 20px;
 	overflow: auto;
 	background: #ededed;
 	-webkit-box-sizing: border-box;
