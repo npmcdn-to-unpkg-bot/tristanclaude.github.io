@@ -54,6 +54,11 @@ h2 {
 			padding:1em;
 			font-size:1em;
 		}
+			.meny ul li:before {
+				content: '-';
+				margin-right: 5px;
+				color: rgba( 255, 255, 255, 0.2 );
+			}
         .meny ul li:hover {
             background-color:rgba(0,0,0,0.025);
     -webkit-transition: 0.15s color ease;
