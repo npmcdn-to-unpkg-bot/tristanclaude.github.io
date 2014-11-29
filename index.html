@@ -3,30 +3,90 @@
     <head>
         <meta charset="utf-8">
         <title>Tristan's Personal Site</title>
-        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/reset.css">
         <style>
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    }
 html,
 body {
 	height: 100%;
 	overflow: hidden;
 }
-
+html {
+            font-size:100%;
+        }
 body {
 	background-color: #222;
-	font-family: 'Lato', Helvetica, sans-serif;
-	font-size: 16px;
-	color: #222;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	font-size: 1.2rem;
+    font-weight:300;
+	color: #111;
 }
-
-a {
-	text-decoration: none;
+body a {
+    text-decoration: none;
 }
-h1,
+h1 {
+    font-size:2rem;
+    line-height:1.25;
+}
+@media (min-width:43.75em) {
+    h1 {
+        font-size:2.5rem;
+        line-height:1.125;
+    }
+}
+@media (min-width:56.25em) {
+    h1 {
+        font-size:3rem;
+        line-height:1.05;
+    }
+}
 h2 {
-	font-size: 24px;
+    font-size:1.625rem;
+    line-height:1.15384615;
 }
+@media (min-width:43.75em) {
+    h2 {
+        font-size:2rem;
+        line-height:1.25;
+    }
+}
+@media (min-width:56.25em) {
+    h2 {
+        font-size:2.25rem;
+        line-height:1.25;
+    }
+}
+h3 {
+    font-size:1.375rem;
+    line-height:1.13636364;
 
+}
+@media (min-width:43.75em) {
+    h3 {
+        font-size:1.5rem;
+        line-height:1.25;
+    }
+}
+@media (min-width:56.25em) {
+    h3 {
+        font-size:1.75rem;
+        line-height:1.25;
+    }
+}
+h4 {
+    font-size:1.125rem;
+    line-height:1.11111111;
+}
+@media (min-width:43.75) {
+    h4 {
+        line-height:1.22222222;
+    }
+}
 .meny {
 	display: none;
     width:160px;
@@ -44,7 +104,7 @@ h2 {
 			padding:1em;
 			font-size:1em;
 		}
-			.meny ul li:before {
+            .meny ul li:before {
 				content: '-';
 				margin-right: 5px;
 				color: rgba( 255, 255, 255, 0.2 );
@@ -58,7 +118,7 @@ h2 {
 	        transition: 0.15s color ease;
         }
         .meny ul li a {
-            color:rgb(160, 160, 160);
+            color:#9F051F;
         }
 .meny-arrow {
 	position: absolute;
@@ -104,31 +164,46 @@ h2 {
 		     -o-transition: opacity 0.2s ease;
 		        transition: opacity 0.2s ease;
 	}
-/* .contents {
+.contents {
 	background: #eee;
-	padding: 20px 40px;
 	width: 100%;
 	height: 100%;
 	overflow-y: auto;
-
 	-webkit-overflow-scrolling: touch;
 	-webkit-transform-style: preserve-3d;
-
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
 }
-	.contents>article {
-		max-width: 400px;
-	}
-	.contents p {
-		margin: 10px 0 10px 0;
-		font-size: 16px;
-		line-height: 1.32;
-	} */
+article {
+    padding:2rem 4rem;
+    max-width:800px;
+}
+article ul {
+	list-style:none;
+}
+article ol {
+	list-style:upper-roman inside none;
+}
+article p {
+    margin:1.375rem auto;
+    font-size:1.4rem;
+}
+article a {
+    color:rgba(159,3,31,1);
+    -webkit-transition: color 0.2s ease;
+       -moz-transition: color 0.2s ease;
+        -ms-transition: color 0.2s ease;
+         -o-transition: color 0.2s ease;
+            transition: color 0.2s ease;
+}
+article a:hover {
+    color:rgba(159,3,31,0.8);
+    -webkit-transition: color 0.2s ease;
+       -moz-transition: color 0.2s ease;
+        -ms-transition: color 0.2s ease;
+         -o-transition: color 0.2s ease;
+            transition: color 0.2s ease;
+}
 .title {
     color:#93101E;
-    font-size:3rem;
 }
         </style>
     </head>
@@ -136,8 +211,7 @@ h2 {
 <div class="meny">
 			<ul>
                 <li><a href="/">Home</a></li>
-				<li><a href="cv/index.html">CV</a></li>
-				<li><a href="/">About</a></li>
+				<li><a href="CV.html">CV</a></li>
 				<li><a href="/">Misc</a></li>
 				<li><a href="/">Links</a></li>
 				<li><a href="/">Contact</a></li>
@@ -146,14 +220,23 @@ h2 {
 			</ul>
 </div>
 <div class="meny-arrow"></div>
-        <div class="contents">
-			<article>
-				<h1 class="title">Tristan Claude</h1>
-				<p>
-					A three dimensional and space efficient menu.
-				</p>
-			</article>
-		</div>
+    <div class="contents">
+        <article>
+            <h1 class="title">Tristan Claude</h1>
+            <h3>Hello, I like to make things.</h3>
+            <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam nisi lorem, pulvinar id, commodo <a href="#">feugiat</a>, vehicula et, mauris. Aliquam mattis porta urna. Maecenas dui neque, rhoncus sed, vehicula vitae, <a href="#">auctor at</a>, nisi. Aenean id massa ut lacus molestie porta. Curabitur sit amet quam id libero suscipit venenatis.
+            </p>
+            <p>
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur <a href="#">ridiculus</a> mus. Suspendisse sed ligula. Sed volutpat odio non turpis gravida luctus. Praesent elit pede, iaculis facilisis, vehicula mattis, tempus non, arcu.
+            </p>
+            <ul>
+                <li>Reading: <a href="http://en.m.wikipedia.org/wiki/When_Nietzsche_Wept_%28novel%29">When Nietzsche Wept</a></li>
+                <li>Listening to: <a href="https://soundcloud.com/musicbyanders">Ánders</a></li>
+                <li>Drinking: <a href="http://www.inc.com/sarah-kimmorley/19-horrible-things-that-can-happen-if-you-drink-too-much-caffeine.html">Too much coffee</a></li>
+            </ul>
+        </article>
+	</div>
 
 		<script src="js/meny.js"></script>
 		<script>
@@ -200,7 +283,5 @@ h2 {
 				contents.innerHTML = '<div class="cover"></div><iframe src="'+ Meny.getQuery().u +'" style="width: 100%; height: 100%; border: 0; position: absolute;"></iframe>';
 			}
 		</script>
-
-		<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 </body>
 </html>
