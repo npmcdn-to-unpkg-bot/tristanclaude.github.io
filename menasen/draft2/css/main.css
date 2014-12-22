@@ -1,0 +1,57 @@
+img {
+    max-width:100%;
+}
+body {
+    background-color:#292929;
+    height:100%;
+    font-family:"Roboto", sans-serif;
+    font-weight:400;
+}
+aside {
+    position:fixed;
+    width:20%;
+    height:100%;
+    background-color:#DFDFDF;
+    -webkit-box-shadow: 18px 0px 100px 0px rgba(250,250,250,0.3);
+    -moz-box-shadow: 18px 0px 100px 0px rgba(250,250,250,0.3);
+    box-shadow: 18px 0px 100px 0px rgba(250,250,250,0.3);
+}
+#logo-image {
+    margin-top:5rem;
+    margin-top:6vw;
+    margin-bottom:0;
+    -webkit-box-shadow: 18px 0px 100px 0px rgba(50,50,50,0.6);
+    -moz-box-shadow: 18px 0px 100px 0px rgba(50,50,50,0.6);
+    box-shadow: 18px 0px 100px 0px rgba(50,50,50,0.6);
+}
+nav {
+    margin-top:-5px;
+}
+nav a {
+    text-align:center;
+    text-decoration:none;
+}
+nav li {
+    padding:2.5rem;
+    padding:2vw;
+    font-size:2rem;
+    font-size:2.5vw;
+    color:#292929;
+    transition:all 0.5s ease;
+}
+nav li:hover {  
+    transition:all 0.5s ease;
+    border-right:10px solid #E87600; /*
+    -moz-box-shadow:    inset 0 0 10px rgba(250,250,250,0.3);
+    -webkit-box-shadow: inset 0 0 10px rgba(250,250,250,0.3);
+    box-shadow:         inset 0 0 10px rgba(250,250,250,0.3); */
+}
+#contact {
+    font-weight:300;
+    font-style:italic;
+    color:#E87600;
+}
+#contact:hover {
+    border-right:10px solid #292929;
+}
+    
