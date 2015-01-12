@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,500italic,700' rel='stylesheet' type='text/css'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
 </head>
 <body>
+    <main>
     <aside>
         <img src="menasenbearslimforsite.png" id="logo-image">
         <nav>
@@ -21,5 +24,89 @@
             </ul>
         </nav>
     </aside>
+    <section>
+        <article>
+            <img src="http://lorempixel.com/400/400/city/">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+        </article>
+        <article>  
+            <img src="http://lorempixel.com/400/600/city/">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+        </article>
+        <article>
+            <img src="http://lorempixel.com/800/400/city/">
+        </article>
+        <article>
+            <img src="http://lorempixel.com/500/400/city/">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+        </article>
+        <article>
+            <img src="http://lorempixel.com/700/400/city/">
+        </article>
+        <article>
+            <img src="http://lorempixel.com/400/700/city/">
+        </article>
+        <article>
+            <img src="http://lorempixel.com/600/500/city/">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+        </article>
+        <article>
+            <img src="http://lorempixel.com/400/400/abstract/">
+        </article>
+        <article>  
+            <img src="http://lorempixel.com/400/600/abstract/">
+        </article>
+        <article>
+            <img src="http://lorempixel.com/800/400/abstract/">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+        </article>
+        <article>
+            <img src="http://lorempixel.com/500/400/abstract/">
+        </article>
+        <article>
+            <img src="http://lorempixel.com/600/400/abstract/">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+        </article>
+        <article>
+            <img src="http://lorempixel.com/400/700/abstract/">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+        </article>
+        <article>
+            <img src="http://lorempixel.com/400/200/abstract/">
+        </article>
+    </section>
+    </main>
+    <script src="http://static.tumblr.com/pngzzki/LJgn1p0r0/isotope.pkgd.min.js"></script>
+    <script>
+                // cache container
+                var $container = $('section');
+                // initialize isotope
+                $container.isotope({
+                    itemSelector: 'article'
+                  // options...
+                });
+                $container.infinitescroll({
+        navSelector  : '.pagination',
+        nextSelector : '.pagination a',
+        itemSelector : '.posts',
+        bufferPx     : 5000,
+        loading: {
+            finishedMsg: 'No more pages to load.',
+            img: ''
+          }
+        },
+        // call Isotope as a callback
+        function( newElements ) {
+          $container.isotope( 'insert', $( newElements ) ); 
+        }
+      );
+
+                // filter items when filter link is clicked
+                $('#filters a').click(function(){
+                  var selector = $(this).attr('data-filter');
+                  $container.isotope({ filter: selector });
+                  return false;
+                });
+            </script>
 </body>    
 </html>
