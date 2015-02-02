@@ -1,0 +1,30 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+img {
+    max-width:100%;
+}
+body {
+    font-family:'Lato', sans-serif;
+    font-weight:300;
+}
+main {
+    margin:7rem 14rem;
+}
+#select {
+    font-size:3rem;
+}
+nav a {
+    text-decoration:none;
+    color:#272527;
+}
+nav a:hover {
+    transition:all 0.5s ease;
+    color:blue;
+}
+nav li {
+    padding:2rem 2rem 0 2rem;
+    font-size:2rem;
+}
