@@ -7,44 +7,130 @@ html {
   font-size: 100%;
 }
 
+html,
 body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #ecf0f1;
+  height: 100%;
+  overflow: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
 }
 
 body a {
   text-decoration: none;
 }
 
-main {
-  position: absolute;
-  left: 9rem;
-  top: 9rem;
-  padding: 2rem;
-  background-color: white;
-}
-
 nav {
-  display: auto;
+  background-color: #F24452;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 
-#menubutton {
+nav a.active {
+  color: white;
+}
+
+.topbar {
+  margin-left: 10rem;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+
+.topbar li {
   display: inline-block;
-  margin: 3rem;
+  line-height: 4.5rem;
+  font-size: 3rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0 2rem;
+  margin-right: -0.25rem;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+
+.topbar a {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.topbar li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.sidebar {
+  width: 10rem;
+}
+
+.sidebar a {
+  display: block;
+  color: rgba(255, 255, 255, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+
+.sidebar a:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+}
+
+.sidebar li {
+  list-style: none;
+  line-height: 4.5rem;
+  margin-left: 2rem;
+  vertical-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.navopen {
+  overflow: hidden;
+}
+
+.saran {
+  background-color: #ecf0f1;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  overflow-y: hidden;
+}
+
+.saran.close {
+  -webkit-transform: translateX(10rem) translateY(4.5rem);
+      -ms-transform: translateX(10rem) translateY(4.5rem);
+          transform: translateX(10rem) translateY(4.5rem);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+main {
+  margin: 10rem auto;
+  padding: 3rem;
+  background: white;
 }
 
 #toggle {
+  z-index: 99;
   display: inline-block;
   margin: 0;
   border: auto;
   background: none;
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
 }
 #toggle span {
   display: block;
 }
 
 .lines-button {
-  padding: 1.5rem 0.75rem;
+  padding: 1.5rem 0;
   -webkit-transition: 0.3s;
           transition: 0.3s;
   cursor: pointer;

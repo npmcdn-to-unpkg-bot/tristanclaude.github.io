@@ -4,22 +4,22 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Tristan's Personal Site</title>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Poly:400,400italic' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/ionicons.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     </head>
 <body>
-<div id="menubutton">
-<a href="#" role="button" aria-label="Toggle Navigation" id="toggle" class="lines-button x">
-<span class="lines"></span>
-</a>
-</div>
-<main>
+
 <nav>
-    <ul>
-        <a href="/"><li class="active">Home</li></a>
+    <ul class="topbar">
+        <li><a href="/" class="icon ion-home active"></a></li>
+        <li><a href="https://instagram.com/tristan.claude/" class="icon ion-social-instagram-outline"></a></li>
+        <li><a href="https://github.com/tristanclaude" class="icon ion-social-octocat"></a></li>
+        <li><a href="https://my.playstation.com/logged-in/trophies/public-trophies/?onlinename=Hark_3" class="icon ion-playstation"></a></li>
+    </ul>
+    <ul class="sidebar">
         <a href="/"><li>About</li></a>
         <a href="/"><li>Contact</li></a>
         <a href="/"><li>Projects</li></a>
@@ -28,27 +28,30 @@
         <a href="/"><li>Other</li></a>
     </ul>
 </nav>
+
+<div class="saran">
+<div id="menubutton">
+<a href="#" role="button" aria-label="Toggle Navigation" id="toggle" class="lines-button x">
+<span class="lines"></span>
+</a>
+</div>
+
+<main>
 <section>
 <p>Welcome to my little corner of the interwebs. I'm Tristan. I'm a curious human being, and I like to make things. I'm passionate about a somewhat random miscellany of subjects and am currently focused on learning about web development.</p><p>On this website you can find my <a href="/">photography</a>, <a href="/">writing</a>, <a href="/">projects</a> I have done, information about me and other nonsense you may or may not find interesting.</p>
 </section>
 </main>
-<script>
-    var anchor = document.querySelectorAll('a');
-    
-    [].forEach.call(anchor, function(anchor){
-      var open = false;
-      anchor.onclick = function(event){
-        event.preventDefault();
-        if(!open){
-          this.classList.add('close');
-          open = true;
-        }
-        else{
-          this.classList.remove('close');
-          open = false;
-        }
-      }
-    }); 
+
+</div>
+
+<script type="text/javascript">
+$("#toggle").click(function() {
+  $("body").toggleClass("navOpen");
+  $("nav").toggleClass("close");
+  $(".saran").toggleClass("close");
+  $(this).toggleClass("close");
+});
 </script>
+
 </body>
 </html>

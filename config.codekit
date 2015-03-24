@@ -137,24 +137,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/knee high socks\/css\/main.css": {
+	"\/knee-high-socks\/css\/main.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/knee high socks\/css\/main.css",
+		"inputAbbreviatedPath": "\/knee-high-socks\/css\/main.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/knee high socks\/css\/main.scss": {
+	"\/knee-high-socks\/css\/main.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 0,
 		"decimalPrecision": 10,
 		"fileType": 4,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/knee high socks\/css\/main.scss",
-		"outputAbbreviatedPath": "\/knee high socks\/css\/main.css",
+		"inputAbbreviatedPath": "\/knee-high-socks\/css\/main.scss",
+		"outputAbbreviatedPath": "\/knee-high-socks\/css\/main.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -162,20 +162,20 @@
 		"shouldRunBless": 1,
 		"useLibsass": 0
 		},
-	"\/knee high socks\/css\/reset.css": {
+	"\/knee-high-socks\/css\/reset.css": {
 		"fileType": 16,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/knee high socks\/css\/reset.css",
+		"inputAbbreviatedPath": "\/knee-high-socks\/css\/reset.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/knee high socks\/index.htm": {
+	"\/knee-high-socks\/index.htm": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/knee high socks\/index.htm",
+		"inputAbbreviatedPath": "\/knee-high-socks\/index.htm",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -405,7 +405,7 @@
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
 	"displayValue": "tristanclaude.github.io",
-	"displayValueWasSetByUser": 0,
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "brackets_blue"
 	},
 "projectSettings": {
