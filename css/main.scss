@@ -1,6 +1,7 @@
 $button-size:3rem;
 $transition:0.5s;
 $color:rgba(0,0,0,0.4);
+$main-background:rgb(236,240,241);
 
 *, *:before, *:after {
     -moz-box-sizing: border-box;
@@ -17,7 +18,7 @@ body {
     text-rendering:optimizeLegibility;
 }
 body {
-    font-family:'Ubuntu', sans-serif;
+  font-family:"Comic Neue", "Comic Sans", sans-serif;
 }
 
 body a {
@@ -37,6 +38,7 @@ nav a.active {
 }
 
 .topbar {
+    font-family:'Ubuntu', sans-serif;
     margin-left:10rem;
     -webkit-margin-before: 0em;
     -webkit-margin-after: 0em;
@@ -56,6 +58,7 @@ nav a.active {
     color:rgba(255,255,255,0.8);}
 .topbar li:hover {background-color:rgba(255,255,255,0.3);}
 .sidebar {
+    font-family:'Ubuntu', sans-serif;
     width:10rem;
 }
 
@@ -86,10 +89,10 @@ nav a.active {
 }
 
 .saran {
-    background-color:rgb(236,240,241);
-	width:100vw;
-	height:100vh;
-	position:relative;
+    background-color:$main-background;
+    width:100vw;
+    height:100vh;
+    position:relative;
     transition-duration:0.5s;
     overflow-y:hidden;
 }
@@ -97,13 +100,33 @@ nav a.active {
 .saran.close {
     transform:translateX(10rem) translateY(4.5rem);
     box-shadow:0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-
 }
 
 main {
-    margin:10rem auto;
-    padding:3rem;
+    margin:10rem 15rem 15rem 0;
     background:white;
+    height:100%;
+
+    a {
+      color:#F24452;
+    }
+}
+main h1 {
+  background-color:darken($main-background, 10%);
+  padding:3rem 0 1rem 2rem;
+  font-size:4rem;
+  font-weight:600;
+  color:#fefefe;
+}
+section {
+  margin:5rem 2.5rem 10rem 10rem;
+
+  p {
+    color:$color;
+    line-height:1.4;
+    font-size:1.5rem;
+    font-weight:400;
+  }
 }
 
 #toggle {
