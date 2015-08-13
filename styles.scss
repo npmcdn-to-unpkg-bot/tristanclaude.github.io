@@ -3,7 +3,7 @@
 # only Main files contain this front matter, not partials.
 ---
 
-@import sanitize
-@import scheme
-@import nav
-@import type
+@import "sanitize";
+@import "scheme";
+@import "nav";
+@import "type";
