@@ -11,7 +11,7 @@ github_username:  tristanclaude
 markdown: kramdown
 sass:
   sass_dir: _sass
-  style: compressed
+  style: :compressed
 
 # Highlighter
 highlighter: pygments
