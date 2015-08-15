@@ -19,3 +19,5 @@ baseurl:             /jekyll-example/
 sass:
   sass_dir:          _sass
   style:            :compressed
+
+safe: true
