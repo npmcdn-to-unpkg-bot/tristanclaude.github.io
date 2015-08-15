@@ -1,20 +1,21 @@
-# Site settings
-title: Tristan's Site
-email: mail@tristanclaude.ca
-description: > # this means to ignore newlines until "baseurl:"
-  This is the personal website of Tristan Claude, an aspiring web designer/developer, programmer, photographer, and writer.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://tristanclaude.ca" # the base hostname & protocol for your site
-github_username:  tristanclaude
+# Syntax highlighting
+highlighter:         pygments
 
-# Build settings
-markdown: kramdown
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               Jekyll Example
+tagline:             Basic example of a Jekyll site with Sass enabled.
+url:                 http://mdo.github.io/jekyll-example
+baseurl:             /jekyll-example/
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
 sass:
-  sass_dir: _sass
-  style: :compressed
-
-# Highlighter
-highlighter: pygments
-
-# Permalink
-permalink: pretty
+  sass_dir:          _scss
+  style:            :compressed
