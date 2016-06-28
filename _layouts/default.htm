@@ -8,4 +8,15 @@
     <header><h1>TRSTN</h1></header>
       {{ content}}
   </body>
+  <script>
+      var colorT = 0;
+
+      function changeColor() {
+        document.body.className = 'color' + colorT % 18;
+        colorT++;
+        setTimeout( changeColor, 5000 )
+      }
+      
+      changeColor();
+  </script>
 </html>
