@@ -1,70 +1,88 @@
-$main-background: rgb(236, 240, 241)
 $transition: 0.5s
-$color: rgba(0, 0, 0, 0.4)
 
 html,
 body
   text-rendering: optimizeLegibility
-  background-color: $main-background
 
-header
-  width: 896px
+body
+  background-color: rgba(25,25,25,0.4)
+  font-family: system, -apple-system,'.SFNSDisplay-Regular'
+
+#masthead
+  max-width: 896px
   height: 5rem
-  margin: 2rem auto
-  background-color: rgba(25,25,25,0.8)
-              -webkit-transition:all 0.3s ease
-                 -moz-transition:all 0.3s ease
-                   -o-transition:all 0.3s ease
-                      transition:all 0.3s ease
+  margin: 2rem auto auto auto
+  background-color: rgba(25,25,25,0.2)
+  -webkit-transition: color 1.5s linear
+  -moz-transition: color 1.5s linear
+  -o-transition: color 1.5s linear
+  transition: color 1.5s linear
 
   h1
-    font-family: system, -apple-system,'.SFNSDisplay-Regular', 'Helvetica Neue', 'Lucida Grande'
-    margin-left: 1rem
+    font-weight: 600
+    float: left
+    margin-left: 2rem
     font-size: 3rem
     line-height: 5rem
 
-body.color0 { color: hsl(  10, 90%, 60% ); }
-body.color1 { color: hsl(  30, 90%, 60% ); }
-body.color2 { color: hsl(  50, 90%, 60% ); }
-body.color3 { color: hsl(  70, 90%, 60% ); }
-body.color4 { color: hsl(  90, 90%, 60% ); }
-body.color5 { color: hsl( 110, 90%, 60% ); }
-body.color6 { color: hsl( 130, 90%, 60% ); }
-body.color7 { color: hsl( 150, 90%, 60% ); }
-body.color8 { color: hsl( 170, 90%, 60% ); }
-body.color9 { color: hsl( 190, 90%, 60% ); }
-body.color10 { color: hsl( 210, 90%, 60% ); }
-body.color11 { color: hsl( 230, 90%, 60% ); }
-body.color12 { color: hsl( 250, 90%, 60% ); }
-body.color13 { color: hsl( 270, 90%, 60% ); }
-body.color14 { color: hsl( 290, 90%, 60% ); }
-body.color15 { color: hsl( 310, 90%, 60% ); }
-body.color16 { color: hsl( 330, 90%, 60% ); }
-body.color17 { color: hsl( 350, 90%, 60% ); }
-
-article
-  display: none
-  font-family: system, -apple-system,'.SFNSDisplay-Regular', 'Helvetica Neue', 'Lucida Grande'
-  margin: 7.5em 2em 0 2em
-  max-width: 46em
-  height: auto
+  h2
+    font-weight: 200
+    float: right
+    margin-right: 2rem
+    font-size: 2rem
+    line-height: 5rem
 
   a
-    color: rgba(255, 0, 0, 0.5)
-    transition-duration: 0.35s
-    &:hover
-      color: rgba(0, 0, 255, 0.5)
-      transition-duration: 0.35s
+    color: rgb(236, 240, 241)
+    -webkit-transition: 0.5s linear
+    -moz-transition: 0.5s linear
+    -o-transition: 0.5s linear
 
-  h3
-    font-size: 2em
-    font-weight: 600
-    color: darken($color, 50%)
-    //background-color: rgba(0, 0, 255, 0.5)
-  p
-    font-size: 1.4rem
+  a:hover
+    color: darken(rgb(236, 240, 241), 20%)
+    -webkit-transition: 0.5s linear
+    -moz-transition: 0.5s linear
+    -o-transition: 0.5s linear
+
+main
+  max-width: 100%
+  height: auto
+  background-color: rgba(25,25,25,0.2)
+
+#me
+  float: left
+  max-height: 380px
+
+#quote
+  display: none
+  float: left
+  width: auto
+  background-color: #4048EA
+
+  h2
     font-weight: 200
-    color: darken($color, 25%)
+    height: 4em
+    line-height: 3em
+    color: #D54663
+    margin: auto 1em
+    font-size: 1.5em
 
-  span
-    color: #F24452
+#corrupt
+  background-color: rgba(25,25,25,0.1)
+  float: left
+  width: 620px
+  padding: 2rem
+  h2
+    font-weight: 200
+    font-size: 1.5rem
+    color: rgb(236, 240, 241)
+#sec2
+  display: none
+  background-color: rgba(25,25,25,0.3)
+  float: left
+  width: 800px
+  padding: 2rem
+  h2
+    font-weight: 200
+    font-size: 1.5rem
+    color: darken(rgb(236, 240, 241), 20%)
