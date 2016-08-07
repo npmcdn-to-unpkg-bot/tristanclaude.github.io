@@ -12,8 +12,5 @@ markdown: kramdown
 sass:
   style: compact
 
-# Highlighter
-highlighter: pygments
-
 # Permalink
 permalink: pretty
