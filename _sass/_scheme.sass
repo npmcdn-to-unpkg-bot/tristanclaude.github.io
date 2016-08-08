@@ -30,7 +30,7 @@ body
 
     a
       color: inherit
-      
+
     a:hover
       color: inherit
 
@@ -76,6 +76,25 @@ article
 @media screen and ( min-width: 768px )
   .carousel-cell img
     height: 600px
+
+.flickity-prev-next-button
+  width: 75px
+  height: 75px
+  background: transparent
+
+.flickity-prev-next-button:hover
+  background: transparent
+
+/* arrow color */
+.flickity-prev-next-button .arrow
+  fill: rgba(255,255,255,0.85)
+
+.flickity-prev-next-button.no-svg
+  color: rgba(255,255,255,0.85)
+
+/* hide disabled button */
+.flickity-prev-next-button:disabled
+  display: none
 
 #me
   float: left
