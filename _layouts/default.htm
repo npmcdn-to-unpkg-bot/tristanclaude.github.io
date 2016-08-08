@@ -5,14 +5,14 @@
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div id="masthead"><h1>TRSTN</h1><h2><a href="#">ABT</a> / <a href="#">WRTNG</a> / <a href="/phtgrphs">PHTGRPHS</a> / <a href="#">PRJCTS</a></h2></div>
+    <div class="masthead" id="changing"><h1><a href="/">TRSTN</a></h1><h2><a href="#">ABT</a> / <a href="#">WRTNG</a> / <a href="/phtgrphs">PHTGRPHS</a> / <a href="#">PRJCTS</a></h2></div>
     <main>
       {{ content}}
     </main>
   </body>
 <script>
   var rotate = function () {
-      var el = document.getElementById('masthead');
+      var el = document.getElementById('changing');
       var timers = new Array(9);
 
       function step1(el) {
@@ -103,9 +103,10 @@ rotate();
 var carousel = document.querySelector('.carousel');
 var flkty = new Flickity( carousel, {
   imagesLoaded: true,
-  percentPosition: false,
   freeScroll: true,
-  wrapAround: true
+  wrapAround: true,
+  contain: true,
+  pageDots: false
 });
 
 </script>
