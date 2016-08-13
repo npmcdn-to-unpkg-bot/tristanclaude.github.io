@@ -50,7 +50,7 @@ body
     -o-transition: 0.5s linear
 
   a:hover
-    color: darken(rgb(236, 240, 241), 20%)
+    color: darken(rgb(236, 240, 241), 10%)
     -webkit-transition: 0.5s linear
     -moz-transition: 0.5s linear
     -o-transition: 0.5s linear
@@ -67,13 +67,9 @@ article
 
 .carousel-cell
   overflow: hidden
-  background-color: rgba(255,255,255,0.8)
   margin-right: 4.5rem
-  padding: 0
-//padding: 2rem
 
 .carousel-cell.is-selected
-  background: rgba(255,255,255,1)
 
 .carousel-cell img
   display: block
@@ -99,16 +95,11 @@ article
 .flickity-prev-next-button:disabled
   display: none
 
-#me
-  float: left
-  max-height: 18rem
-  margin: 2rem 0 2rem 2rem
-
-#home
-  margin: 2rem auto
-  background-color: rgba(236, 240, 241, 0.5)
-  padding: 1rem 2rem
-  max-width: 56rem
+.home
+  //background-color: rgba(236, 240, 241, 0.5)
+  padding: 1rem 1.5rem
+  margin-right: 4.5rem
+  width: 56rem
   font-weight: 300
   font-size: 2rem
   -webkit-transition: color 1.5s linear
@@ -116,16 +107,38 @@ article
   -o-transition: color 1.5s linear
   transition: color 1.5s linear
 
+  ul
+    width: 56rem
+
+  li
+    list-style: none
+    line-height: 1.4
+    padding-bottom: 1rem
+    font-weight: 300
+    color: rgba(25,25,25,0.8)
+
+  a
+    color: rgb(236, 240, 241)
+    -webkit-transition: 0.5s linear
+    -moz-transition: 0.5s linear
+    -o-transition: 0.5s linear
+
+  a:hover
+    color: darken(rgb(236, 240, 241), 10%)
+    -webkit-transition: 0.5s linear
+    -moz-transition: 0.5s linear
+    -o-transition: 0.5s linear
+
   span
     color: #01b0f0
     transition: color 1.5s linear
 
   h2
-    font-size: 2rem
+    font-size: 2.25rem
     padding-bottom: 0.5rem
     color: rgba(25,25,25,0.5)
   p
     line-height: 1.4
     padding-bottom: 1rem
-    font-weight: 400
+    font-weight: 300
     color: rgba(25,25,25,0.8)
