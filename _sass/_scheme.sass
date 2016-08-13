@@ -5,9 +5,9 @@ body
   text-rendering: optimizeLegibility
 
 body
-  background-color: rgba(25,25,25,0.2)
-  //background-repeat: repeat
-  //background-attachment: fixed
+  background-color: rgba(73,73,73,0.2)
+  background-repeat: repeat
+  background-attachment: fixed
   //background-image: url('concrete-wall.png')
   font-family: 'Fira Sans'
 //font-family: system, -apple-system, BlinkMacSystemFont,'Open Sans','Helvetica Neue','Lucida Grande'
@@ -105,11 +105,16 @@ article
   margin: 2rem 0 2rem 2rem
 
 #home
-  margin: 2rem
-  //padding: 1rem 2rem
-  width: 42rem
+  margin: 2rem auto
+  background-color: rgba(236, 240, 241, 0.5)
+  padding: 1rem 2rem
+  max-width: 56rem
   font-weight: 300
-  font-size: 1.5rem
+  font-size: 2rem
+  -webkit-transition: color 1.5s linear
+  -moz-transition: color 1.5s linear
+  -o-transition: color 1.5s linear
+  transition: color 1.5s linear
 
   span
     color: #01b0f0
@@ -122,3 +127,5 @@ article
   p
     line-height: 1.4
     padding-bottom: 1rem
+    font-weight: 400
+    color: rgba(25,25,25,0.8)
