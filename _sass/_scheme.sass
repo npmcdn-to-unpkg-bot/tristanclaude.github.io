@@ -63,7 +63,7 @@ article
   display: auto
 
 .carousel
-  margin: 2rem auto auto auto
+  margin: 2rem auto
 
 .carousel-cell
   overflow: hidden
@@ -75,6 +75,12 @@ article
   display: block
   height: 37.1875rem
 
+/* position outside */
+.flickity-prev-next-button.previous
+  left: 4rem
+
+.flickity-prev-next-button.next
+  right: 4rem
 
 .flickity-prev-next-button
   width: 75px
@@ -107,24 +113,14 @@ article
   -o-transition: color 1.5s linear
   transition: color 1.5s linear
 
-  ul
-    width: 56rem
-
-  li
-    list-style: none
-    line-height: 1.4
-    padding-bottom: 1rem
-    font-weight: 300
-    color: rgba(25,25,25,0.8)
-
   a
-    color: rgb(236, 240, 241)
+    color: darken(rgb(236, 240, 241), 20%)
     -webkit-transition: 0.5s linear
     -moz-transition: 0.5s linear
     -o-transition: 0.5s linear
 
   a:hover
-    color: darken(rgb(236, 240, 241), 10%)
+    color: darken(rgb(236, 240, 241), 30%)
     -webkit-transition: 0.5s linear
     -moz-transition: 0.5s linear
     -o-transition: 0.5s linear

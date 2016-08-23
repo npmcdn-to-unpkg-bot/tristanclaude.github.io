@@ -10,7 +10,7 @@ github_username:  tristanclaude
 # Build settings
 markdown: kramdown
 sass:
-  style: compact
+  style: compressed
 
 # Permalink
 permalink: pretty
