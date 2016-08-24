@@ -2,8 +2,8 @@
 layout: default
 title: Phtgrphs
 ---
-<article>
 <div class="carousel">
+  <div class="carousel-nav"><a class="button-prev">Previous</a> / <a class="button-next">Next</a></div>
   <div class="carousel-cell">
     <img src="https://c1.staticflickr.com/5/4015/4563474823_c4f2166be2_b.jpg" alt="orange tree" />
   </div>
@@ -20,15 +20,22 @@ title: Phtgrphs
     <img src="https://c2.staticflickr.com/4/3301/4564065280_02b14c5ff5_b.jpg" alt="contrail" />
   </div>
 </div>
-</article>
 <script>
 var carousel = document.querySelector('.carousel');
 var flkty = new Flickity( carousel, {
   imagesLoaded: true,
+  cellSelector: '.carousel-cell',
   initialIndex: 0,
-  freeScroll: true,
-  wrapAround: true,
-  contain: true,
+  prevNextButtons: false,
   pageDots: false
 });
+var previousButton = document.querySelector('.button-prev');
+previousButton.addEventListener( 'click', function() {
+  flkty.previous();
+});
+var nextButton = document.querySelector('.button-next');
+nextButton.addEventListener( 'click', function() {
+  flkty.next();
+});
+carousel.focus();
 </script>

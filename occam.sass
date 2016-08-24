@@ -90,9 +90,15 @@ article
   -o-transition: 3s linear
   transition: 3s linear
 
+#theme-button
+  z-index: 99
+  position: fixed
+  right: 2rem
+  top: 1rem
+
 .nav-toggle
   //display: none
-  z-index: 1000
+  z-index: 99
   position: fixed
   left: 10rem
   bottom: 1rem
@@ -167,3 +173,58 @@ article
       transform: rotate(-45deg)
       top: 20px
       left: 0px
+
+.carousel
+  position: relative
+  top: 50%
+  transform: translateY(-50%)
+
+.carousel-nav
+  margin-top: -2rem
+  margin-left: 2rem
+  padding-bottom: 1rem
+
+.button-prev
+  cursor: pointer
+
+.button-next
+  cursor: pointer
+
+.carousel-cell
+  overflow: hidden
+  margin-right: 4rem
+  opacity: 0
+  -webkit-transition: 1s cubic-bezier(0.77, 0, 0.175, 1)
+  -moz-transition: 1s cubic-bezier(0.77, 0, 0.175, 1)
+  -o-transition: 1s cubic-bezier(0.77, 0, 0.175, 1)
+  transition: 1s cubic-bezier(0.77, 0, 0.175, 1)
+
+.carousel-cell.is-selected
+  opacity: 1
+  -webkit-transition: 1s cubic-bezier(0.77, 0, 0.175, 1)
+  -moz-transition: 1s cubic-bezier(0.77, 0, 0.175, 1)
+  -o-transition: 1s cubic-bezier(0.77, 0, 0.175, 1)
+  transition: 1s cubic-bezier(0.77, 0, 0.175, 1)
+
+.carousel-cell img
+  display: block
+  height: 37.1875rem
+
+.flickity-prev-next-button
+  width: 75px
+  height: 75px
+  background: transparent
+
+.flickity-prev-next-button:hover
+  background: transparent
+
+/* arrow color */
+.flickity-prev-next-button .arrow
+  fill: rgba(255,255,255,0.85)
+
+.flickity-prev-next-button.no-svg
+  color: rgba(255,255,255,0.85)
+
+/* hide disabled button */
+.flickity-prev-next-button:disabled
+  display: none

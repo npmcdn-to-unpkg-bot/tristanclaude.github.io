@@ -82,6 +82,10 @@ article
 
   span
     color: #DB08B9
+    -webkit-transition: 3s linear
+    -moz-transition: 3s linear
+    -o-transition: 3s linear
+    transition: 3s linear
 
 #changing
   letter-spacing: 0.5rem
@@ -90,6 +94,15 @@ article
   -o-transition: 3s linear
   transition: 3s linear
 
+#theme-button
+  z-index: 99
+  position: fixed
+  right: 2rem
+  top: 1rem
+  color: rgba(0,254,0,0.6)
+
+  &:hover
+    color: rgba(0,254,0,1)
 
 .nav-toggle
   //display: none

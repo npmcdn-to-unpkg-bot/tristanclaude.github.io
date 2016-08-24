@@ -13,8 +13,7 @@
 <script type="text/javascript">
 $(".nav-arrow").click(function() {
   $("body").toggleClass("navOpen");
-  $("main").toggleClass("close");
-  $(".nav-toggle").toggleClass("close");
+  $("main, .nav-toggle").toggleClass("close");
   $(this).toggleClass("close");
 });
 </script>
