@@ -11,7 +11,19 @@ body
 body
   background-color: black
   font-family: 'Fira Mono'
+  a
+    color: #ff358b
+    -webkit-transition: 0.5s linear
+    -moz-transition: 0.5s linear
+    -o-transition: 0.5s linear
+    transition: 0.5s linear
 
+  a:hover
+    color: #00FE00
+    -webkit-transition: 0.5s linear
+    -moz-transition: 0.5s linear
+    -o-transition: 0.5s linear
+    transition: 0.5s linear
 nav
   background-color: black
   position: fixed
@@ -28,7 +40,7 @@ nav
     -o-transition: 0.5s linear
 
   a:hover
-    color: #DB08B9
+    color: #ff358b
     -webkit-transition: 0.5s linear
     -moz-transition: 0.5s linear
     -o-transition: 0.5s linear
@@ -81,13 +93,14 @@ article
     font-size: 1rem
 
   span
-    color: #DB08B9
+    color: #ff358b
     -webkit-transition: 3s linear
     -moz-transition: 3s linear
     -o-transition: 3s linear
     transition: 3s linear
 
 #changing
+  color: #ff358b
   letter-spacing: 0.5rem
   -webkit-transition: 3s linear
   -moz-transition: 3s linear
@@ -103,6 +116,17 @@ article
 
   &:hover
     color: rgba(0,254,0,1)
+
+#theme-choice
+  z-index: 99
+  position: fixed
+  top: 4rem
+  right: 2rem
+  & a
+    display: block
+    color: rgba(0,254,0,0.6)
+    &:hover
+      color: rgba(0,254,0,1)
 
 .nav-toggle
   //display: none
@@ -182,3 +206,59 @@ article
       transform: rotate(-45deg)
       top: 20px
       left: 0px
+
+.carousel
+  position: relative
+  top: 50%
+  transform: perspective(1px) translateY(-50%)
+
+.carousel-nav
+  color: #34D5EB
+  margin-top: -2rem
+  margin-left: 2rem
+  padding-bottom: 1rem
+
+.button-prev
+  cursor: pointer
+
+.button-next
+  cursor: pointer
+
+.carousel-cell
+  overflow: hidden
+  margin-right: 8rem
+  opacity: 0
+  -webkit-transition: 0.8s cubic-bezier(0.77, 0, 0.175, 1)
+  -moz-transition: 0.8s cubic-bezier(0.77, 0, 0.175, 1)
+  -o-transition: 0.8s cubic-bezier(0.77, 0, 0.175, 1)
+  transition: 0.8s cubic-bezier(0.77, 0, 0.175, 1)
+
+.carousel-cell.is-selected
+  opacity: 1
+  -webkit-transition: 0.8s cubic-bezier(0.77, 0, 0.175, 1)
+  -moz-transition: 0.8s cubic-bezier(0.77, 0, 0.175, 1)
+  -o-transition: 0.8s cubic-bezier(0.77, 0, 0.175, 1)
+  transition: 0.8s cubic-bezier(0.77, 0, 0.175, 1)
+
+.carousel-cell img
+  display: block
+  height: 37.1875rem
+
+.flickity-prev-next-button
+  width: 75px
+  height: 75px
+  background: transparent
+
+.flickity-prev-next-button:hover
+  background: transparent
+
+/* arrow color */
+.flickity-prev-next-button .arrow
+  fill: rgba(255,255,255,0.85)
+
+.flickity-prev-next-button.no-svg
+  color: rgba(255,255,255,0.85)
+
+/* hide disabled button */
+.flickity-prev-next-button:disabled
+  display: none
