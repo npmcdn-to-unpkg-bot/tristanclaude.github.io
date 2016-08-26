@@ -1,30 +1,23 @@
-function setActiveStyleSheet(title) {
-  var i, a, main;
-  for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
-    if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
-      a.disabled = true;
-      if(a.getAttribute("title") == title) a.disabled = false;
+function setActiveStyleSheets(ids){
+  ids = ids.split(',');
+  var i, j, l, link;
+  for(i=0; (link = document.getElementById(ids[i])); i++){
+    for(j=0; (l = document.getElementsByTagName('link')[j]); j++){
+      if(l.hasAttribute('switch') && l.className.indexOf(link.className) !== -1)
+        l.removeAttribute('href');
+    }
+    link.href = link.getAttribute('switch');
+  }
+}
+
+function getActiveStyleSheets(){
+  var i, link, active = [];
+  for(i=0; (link = document.getElementsByTagName('link')[i]); i++){
+    if(link.hasAttribute('switch') && link.href){
+      active.push(link.id);
     }
   }
-}
-
-function getActiveStyleSheet() {
-  var i, a;
-  for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
-    if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title") && !a.disabled) return a.getAttribute("title");
-  }
-  return null;
-}
-
-function getPreferredStyleSheet() {
-  var i, a;
-  for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
-    if(a.getAttribute("rel").indexOf("style") != -1
-       && a.getAttribute("rel").indexOf("alt") == -1
-       && a.getAttribute("title")
-       ) return a.getAttribute("title");
-  }
-  return null;
+  return active.join(',');
 }
 
 function createCookie(name,value,days) {
@@ -39,9 +32,8 @@ function createCookie(name,value,days) {
 
 function readCookie(name) {
   var nameEQ = name + "=";
-  var ca = document.cookie.split(';');
-  for(var i=0;i < ca.length;i++) {
-    var c = ca[i];
+  var i, c, ca = document.cookie.split(';');
+  for(i=0; (c = ca[i]); i++) {
     while (c.charAt(0)==' ') c = c.substring(1,c.length);
     if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
   }
@@ -50,15 +42,11 @@ function readCookie(name) {
 
 window.onload = function(e) {
   var cookie = readCookie("style");
-  var title = cookie ? cookie : getPreferredStyleSheet();
-  setActiveStyleSheet(title);
+  var title = cookie || getActiveStyleSheets();
+  setActiveStyleSheets(title);
 }
 
 window.onunload = function(e) {
-  var title = getActiveStyleSheet();
+  var title = getActiveStyleSheets();
   createCookie("style", title, 365);
 }
-
-var cookie = readCookie("style");
-var title = cookie ? cookie : getPreferredStyleSheet();
-setActiveStyleSheet(title);
