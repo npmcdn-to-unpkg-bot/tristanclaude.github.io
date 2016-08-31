@@ -9,11 +9,15 @@
   {% if page.categories %}<meta name="keywords" content="{{ page.categories | join: ', ' }}">{% endif %}
   <!-- Canonical -->
 	<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <!-- RSS -->
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.baseurl }}/atom.xml">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
   <!-- Icons -->
   <link rel="shortcut icon" href="{{ "/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
   <!-- CSS -->
   <link rel="stylesheet" href="/everywhere.css">
-  <link href="/occam.css" switch="/occam.css" rel="stylesheet" type="text/css" class="themes" id="body1">
+  <link href="/cyberweb.css" switch="/occam.css" rel="stylesheet" type="text/css" class="themes" id="body1">
   <link switch="/cyberweb.css" rel="stylesheet" type="text/css" class="themes" id="body2">
   <link switch="/files/theme/body3.css" rel="stylesheet" type="text/css" class="themes" id="body3">
 
