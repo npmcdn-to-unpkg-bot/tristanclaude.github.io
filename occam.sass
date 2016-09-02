@@ -7,10 +7,8 @@ body
   text-rendering: optimizeLegibility
   height: 100%
   overflow: hidden
-
 body
-  //font-family: system, -apple-system, BlinkMacSystemFont,'Open Sans','Helvetica Neue','Lucida Grande'
-  font-family: "Fira Sans", sans-serif
+  font-family: "Overpass", sans-serif
   font-weight: 300
   font-size: 1em
   line-height: 1.5
@@ -43,16 +41,14 @@ nav
     padding-bottom: 0
     font-size: 1.25rem
 
-.navopen
-  overflow: hidden
-
 main
   background-color: white
   left: 8rem
   width: 100%
+  width: calc(100% - 8rem)
   height: 100%
   position: relative
-  overflow-y: hidden
+  overflow-y: auto
   //box-shadow: 0 0px 4rem rgba(0, 0, 0, 0.15)
   border-left: 1px solid rgba(0, 0, 0, 0.25)
   -webkit-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
@@ -96,6 +92,15 @@ article
     -o-transition: color 3s linear
     transition: color 3s linear
 
+#repository-page
+  padding: 1rem 2rem
+  ol
+    float: left
+    width: 20%
+    background-color: rgba(24,24,24,0.24)
+  li
+    list-style: none
+
 #changing
   color: #ff358b
   letter-spacing: 0.5rem
@@ -122,83 +127,36 @@ article
   & ul
     list-style: none
 
-.nav-toggle
-  //display: none
+.nav-arrow
   z-index: 99
   position: fixed
-  left: 10rem
+  left: 7rem
   bottom: 1rem
+  width: 0
+  height: 0
+  border-top: 16px solid transparent
+  border-bottom: 16px solid transparent
+  border-right: 16px solid rgba(0, 0, 0, 0.25)
+  cursor: pointer
   -webkit-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
   -moz-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
   -o-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
   transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
 
+  &:hover
+    border-right: 16px solid rgba(0, 0, 0, 0.2)
+
   &.close
-    left: 2rem
+    left: 1px
+    -webkit-transform: rotate(180deg)
+    -moz-transform: rotate(180deg)
+    -o-transform: rotate(180deg)
+    transform: rotate(180deg)
     -webkit-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
     -moz-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
     -o-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
     transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
 
-.nav-arrow
-  width: 35px
-  height: 35px
-  position: relative
-  margin: 1rem auto
-  -webkit-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-  -moz-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-  -o-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-  transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-  cursor: pointer
-
-.nav-arrow span
-  display: block
-  position: absolute
-  height: 10px
-  width: 70%
-  background: #8D8E8C
-  border-radius: 0px
-  opacity: 1
-  left: 0
-  -webkit-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-  -moz-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-  -o-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-  transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-
-.nav-arrow
-  span
-    &:nth-child(1)
-      -webkit-transform: rotate(-45deg)
-      -moz-transform: rotate(-45deg)
-      -o-transform: rotate(-45deg)
-      transform: rotate(-45deg)
-      top: 10px
-      left: 0px
-
-    &:nth-child(2)
-      -webkit-transform: rotate(45deg)
-      -moz-transform: rotate(45deg)
-      -o-transform: rotate(45deg)
-      transform: rotate(45deg)
-      top: 20px
-      left: 0px
-
-  &.close span
-    &:nth-child(1)
-      -webkit-transform: rotate(45deg)
-      -moz-transform: rotate(45deg)
-      -o-transform: rotate(45deg)
-      transform: rotate(45deg)
-      top: 10px
-      left: 0px
-
-    &:nth-child(2)
-      -webkit-transform: rotate(-45deg)
-      -moz-transform: rotate(-45deg)
-      -o-transform: rotate(-45deg)
-      transform: rotate(-45deg)
-      top: 20px
-      left: 0px
 
 .carousel
   position: relative

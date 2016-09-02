@@ -10,7 +10,8 @@ body
 
 body
   background-color: black
-  font-family: 'Fira Mono', monospace
+  //font-family: 'Fira Mono', monospace
+  font-family: Hack, monospace
   a
     color: #ff358b
     -webkit-transition: 0.5s linear
@@ -58,7 +59,7 @@ main
   width: 100%
   height: 100%
   position: relative
-  overflow-y: hidden
+  overflow-y: scroll
   border-left: 1px solid #34D5EB
   -webkit-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
   -moz-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
@@ -113,6 +114,7 @@ article
   right: 2rem
   top: 1rem
   color: rgba(0,254,0,0.6)
+  display: none
 
   &:hover
     color: rgba(0,254,0,1)
@@ -122,90 +124,42 @@ article
   position: fixed
   top: 4rem
   right: 2rem
+  display: none
   & a
     display: block
     color: rgba(0,254,0,0.6)
     &:hover
       color: rgba(0,254,0,1)
 
-.nav-toggle
-  //display: none
-  z-index: 1000
+.nav-arrow
+  z-index: 99
   position: fixed
-  left: 10rem
+  left: 7rem
   bottom: 1rem
+  width: 0
+  height: 0
+  border-top: 16px solid transparent
+  border-bottom: 16px solid transparent
+  border-right: 16px solid #34D5EB
+  cursor: pointer
   -webkit-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
   -moz-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
   -o-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
   transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
 
+  &:hover
+    border-right: 16px solid lighten(#34D5EB, 10%)
+
   &.close
-    left: 2rem
+    left: 0
+    -webkit-transform: rotate(180deg)
+    -moz-transform: rotate(180deg)
+    -o-transform: rotate(180deg)
+    transform: rotate(180deg)
     -webkit-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
     -moz-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
     -o-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
     transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-
-.nav-arrow
-  width: 35px
-  height: 35px
-  position: relative
-  margin: 1rem auto
-  -webkit-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-  -moz-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-  -o-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-  transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-  cursor: pointer
-
-.nav-arrow span
-  display: block
-  position: absolute
-  height: 10px
-  width: 70%
-  background: #00FE00
-  background: #9396AA
-  border-radius: 0px
-  opacity: 1
-  left: 0
-  -webkit-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-  -moz-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-  -o-transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-  transition: .5s cubic-bezier(0.77, 0, 0.175, 1)
-
-.nav-arrow
-  span
-    &:nth-child(1)
-      -webkit-transform: rotate(-45deg)
-      -moz-transform: rotate(-45deg)
-      -o-transform: rotate(-45deg)
-      transform: rotate(-45deg)
-      top: 10px
-      left: 0px
-
-    &:nth-child(2)
-      -webkit-transform: rotate(45deg)
-      -moz-transform: rotate(45deg)
-      -o-transform: rotate(45deg)
-      transform: rotate(45deg)
-      top: 20px
-      left: 0px
-
-  &.close span
-    &:nth-child(1)
-      -webkit-transform: rotate(45deg)
-      -moz-transform: rotate(45deg)
-      -o-transform: rotate(45deg)
-      transform: rotate(45deg)
-      top: 10px
-      left: 0px
-
-    &:nth-child(2)
-      -webkit-transform: rotate(-45deg)
-      -moz-transform: rotate(-45deg)
-      -o-transform: rotate(-45deg)
-      transform: rotate(-45deg)
-      top: 20px
-      left: 0px
 
 .carousel
   position: relative

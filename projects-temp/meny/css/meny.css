@@ -1,0 +1,229 @@
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+html,
+body {
+	height: 100%;
+	overflow: hidden;
+    text-rendering:optimizeLegibility;
+}
+html {
+            font-size:100%;
+        }
+@media (max-width:37.5em) {
+    html {
+        font-size:80%;
+    }
+}
+@media (max-width:25em) {
+    html {
+        font-size:70%;
+    }
+    .foot {
+        display:none;
+    }
+}
+body {
+	background-color: #666;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	font-size: 1.2rem;
+    font-weight:300;
+	color: #111;
+}
+body a {
+    text-decoration: none;
+}
+h1 {
+    font-size:2rem;
+    line-height:1.25;
+}
+@media (min-width:43.75em) {
+    h1 {
+        font-size:2.5rem;
+        line-height:1.125;
+    }
+}
+@media (min-width:56.25em) {
+    h1 {
+        font-size:3rem;
+        line-height:1.05;
+    }
+}
+h2 {
+    font-size:1.625rem;
+    line-height:1.15384615;
+}
+@media (min-width:43.75em) {
+    h2 {
+        font-size:2rem;
+        line-height:1.25;
+    }
+}
+@media (min-width:56.25em) {
+    h2 {
+        font-size:2.25rem;
+        line-height:1.25;
+    }
+}
+h3 {
+    font-size:1.375rem;
+    line-height:1.13636364;
+
+}
+@media (min-width:43.75em) {
+    h3 {
+        font-size:1.5rem;
+        line-height:1.25;
+    }
+}
+@media (min-width:56.25em) {
+    h3 {
+        font-size:1.75rem;
+        line-height:1.25;
+    }
+}
+h4 {
+    font-size:1.125rem;
+    line-height:1.11111111;
+}
+@media (min-width:43.75) {
+    h4 {
+        line-height:1.22222222;
+    }
+}
+nav {
+	display: none;
+    width:10rem;
+	overflow: auto;
+	background: #ededed;
+	border-right:8px solid #6D0F0F;
+}
+	nav ul {
+		margin:auto;
+	}
+        nav ul li.active {
+            color:#fdfdfd;
+            background-color:#6D0F0F;
+        }
+        nav ul li.active:hover {
+            background-color:#9F051F;
+        }
+		nav ul li {
+			display: block;
+			padding:1em;
+			font-size:1em;
+            color:#9F051F;
+		}
+            nav ul li:before {
+				content: '-';
+				margin-right: 5px;
+				color: rgba( 255, 255, 255, 0.2 );
+			}
+        nav ul li:hover {
+            background-color:rgba(0,0,0,0.025);
+    -webkit-transition: 0.15s color ease;
+	   -moz-transition: 0.15s color ease;
+	    -ms-transition: 0.15s color ease;
+	     -o-transition: 0.15s color ease;
+	        transition: 0.15s color ease;
+        }
+.navbutton {
+	position: absolute;
+	z-index: 10;
+	border: 10px solid transparent;
+
+	-webkit-transition: opacity 0.4s ease 0.4s;
+	   -moz-transition: opacity 0.4s ease 0.4s;
+	    -ms-transition: opacity 0.4s ease 0.4s;
+	     -o-transition: opacity 0.4s ease 0.4s;
+	        transition: opacity 0.4s ease 0.4s;
+}
+	.meny-left .navbutton {
+		left: 14px;
+		top: 50%;
+		margin-top: -16px;
+		border-left: 16px solid #111;
+	}
+	.meny-right .navbutton {
+		right: 14px;
+		top: 50%;
+		margin-top: -16px;
+		border-right: 16px solid #111;
+	}
+	.meny-top .navbutton {
+		left: 50%;
+		top: 14px;
+		margin-left: -16px;
+		border-top: 16px solid #111;
+	}
+	.meny-bottom .navbutton {
+		left: 50%;
+		bottom: 14px;
+		margin-left: -16px;
+		border-bottom: 16px solid #111;
+	}
+	.meny-active .navbutton {
+		opacity: 0;
+
+		-webkit-transition: opacity 0.2s ease;
+		   -moz-transition: opacity 0.2s ease;
+		    -ms-transition: opacity 0.2s ease;
+		     -o-transition: opacity 0.2s ease;
+		        transition: opacity 0.2s ease;
+	}
+main {
+	background:#fdfdfd;
+	width:100%;
+	height:100%;
+	overflow-y:auto;
+	-webkit-overflow-scrolling:touch;
+	-webkit-transform-style:preserve-3d;
+}
+main a {
+    color:rgba(159,3,31,1);
+    -webkit-transition: color 0.2s ease;
+       -moz-transition: color 0.2s ease;
+        -ms-transition: color 0.2s ease;
+         -o-transition: color 0.2s ease;
+            transition: color 0.2s ease;
+}
+main a:hover {
+    color:rgba(159,3,31,0.8);
+    -webkit-transition: color 0.2s ease;
+       -moz-transition: color 0.2s ease;
+        -ms-transition: color 0.2s ease;
+         -o-transition: color 0.2s ease;
+            transition: color 0.2s ease;
+}
+article {
+    padding:2rem 4rem;
+    max-width:50rem;
+}
+article h1 {
+    color:#93101E;
+}
+article h3 {
+    color:#6D0F0F;
+}
+article ul {
+	list-style:none;
+}
+article ol {
+	list-style:upper-roman inside none;
+}
+article p {
+    margin:1.375rem auto;
+    font-size:1.4rem;
+}
+footer {
+    padding:2rem 4rem;
+    max-width:50rem;
+    position:absolute;
+    bottom:0;
+}
+footer p {
+    margin:1.375rem auto;
+    font-size:80%;
+}
